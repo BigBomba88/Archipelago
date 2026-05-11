@@ -34,7 +34,7 @@ def generate_output(world: "DQ2World", output_directory: str):
             #if is offworld item
 
             #if being placed at a chest
-            if location.name.find("Chest") != -1:
+            if location.name.find("Chest") != -1 or location.name in ["Sun Crest", "Water Crest", "Life Crest", "Star Crest"]:
                 #make the chest have nothing :)
                 the_item = 0
             else:
@@ -43,7 +43,7 @@ def generate_output(world: "DQ2World", output_directory: str):
             #if item is also an event item
             if the_item.name in list(event_items.keys()):
                 #if being placed at a chest
-                if location.name.find("Chest") != -1:
+                if location.name.find("Chest") != -1 or location.name in ["Sun Crest", "Water Crest", "Life Crest", "Star Crest"]:
                     #make the chest have nothing :)
                     the_item = 0
                 else:

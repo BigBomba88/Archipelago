@@ -244,7 +244,7 @@ dq2_locations = {
     "Osterfair Shop Chest 1": LocData(124, "Osterfair"),
     "Osterfair Shop Chest 2": LocData(125, "Osterfair"),
 
-    "Moon Crest": LocData(126, "Osterfair"),
+    #"Moon Crest": LocData(126, "Osterfair"),
 
     #Lighthouse
     "Lighthouse Chest 1": LocData(127, "Lighthouse"),
