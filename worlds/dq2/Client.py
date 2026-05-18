@@ -41,7 +41,7 @@ class DQ2Client(BizHawkClient):
 
     async def validate_rom(self, ctx):
         game_name = await read(ctx.bizhawk_ctx, [(0x3FE0, 0x10, "PRG ROM")])
-        game_name = game_name[0].decode("ascii")
+        game_name = game_name[0].decode("ascii", errors="ignore")
         if game_name != "DRAGON WARRIORS2":
             return False
 
