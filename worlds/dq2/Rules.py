@@ -39,19 +39,19 @@ def set_rules(world: "DQ2World"):
     #add_rule(world.multiworld.get_location("Echoing Flute", player),
     #         lambda state: state.has_all(["Ship", "Silver Key"], player))
     add_rule(world.multiworld.get_location("Star Crest", player),
-             lambda state: state.has("Ship", player) and state.has_any(["Gold Key", "Silver Key", "Jailor's Key"], player))
+             lambda state: state.has("Ship", player) and state.has("Gold Key", player))
     for i in range(4) :
         add_rule(world.multiworld.get_location("Charlock Chest "+str(i+1), player),
              lambda state: state.has("Gold Key", player))
     #add_rule(world.multiworld.get_location("Water Flying Cloth", player),
              #lambda state: state.has_all(["Dew's Yarn", "Gold Key", "Magic Loom"], player))
     add_rule(world.multiworld.get_location("Moon Fragment", player),
-             lambda state: state.has("Ship", player) and state.has_any(["Gold Key", "Silver Key", "Jailor's Key"], player))
+             lambda state: state.has("Ship", player) and state.has("Gold Key", player))
     for i in range(3) :
         add_rule(world.multiworld.get_location("Sea Cave Chest "+str(i+1), player),
-             lambda state: state.has_any(["Gold Key", "Silver Key", "Jailor's Key"], player))
+             lambda state: state.has("Gold Key", player))
     add_rule(world.multiworld.get_location("Eye of Malroth", player),
-             lambda state: state.has_any(["Gold Key", "Silver Key", "Jailor's Key"], player))
+             lambda state: state.has("Gold Key", player))
     #add_rule(world.multiworld.get_location("Erdrick's Helmet", player),
              #lambda state: state.has("Token of Erdrick", player))
     add_rule(world.multiworld.get_location("Watergate Key", player),
